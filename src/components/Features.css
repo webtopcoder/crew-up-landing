@@ -56,10 +56,18 @@
   align-items: center;
   justify-content: center;
   align-self: center;
+  flex-shrink: 0;
   width: 56px;
   height: 56px;
   background: var(--color-icon-bg);
   border-radius: 50%;
+}
+
+.feature-icon-svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+  stroke-width: 1.75;
 }
 
 .feature-title {
