@@ -1,4 +1,4 @@
-import crewupLogo from '../assets/crewup-logo.png'
+import crewupLogo from '../assets/crewup-logo-horizontal.png'
 import './Header.css'
 
 const navLinks = [
@@ -12,7 +12,7 @@ const navLinks = [
 function Logo() {
   return (
     <a href="/" className="logo" aria-label="CREWUP home">
-      <img src={crewupLogo} alt="CREWUP" className="logo-image" />
+      <img src={crewupLogo} alt="CREWUP — a robb building materials co." className="logo-image" />
     </a>
   )
 }
