@@ -1,3 +1,4 @@
+import crewupLogo from '../assets/crewup-logo.png'
 import './Header.css'
 
 const navLinks = [
@@ -11,33 +12,7 @@ const navLinks = [
 function Logo() {
   return (
     <a href="/" className="logo" aria-label="CREWUP home">
-      <svg
-        className="logo-icon"
-        width="36"
-        height="36"
-        viewBox="0 0 36 36"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M18 4C10.268 4 4 10.268 4 18s6.268 14 14 14c3.866 0 7.366-1.566 9.9-4.1"
-          stroke="#0066FF"
-          strokeWidth="4"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path
-          d="M18 4c7.732 0 14 6.268 14 14s-6.268 14-14 14"
-          stroke="#1a1a1a"
-          strokeWidth="4"
-          strokeLinecap="round"
-          fill="none"
-        />
-      </svg>
-      <span className="logo-text">
-        <span className="logo-crew">CREW</span>
-        <span className="logo-up">UP</span>
-      </span>
+      <img src={crewupLogo} alt="CREWUP" className="logo-image" />
     </a>
   )
 }

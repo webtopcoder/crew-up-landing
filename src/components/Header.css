@@ -1,4 +1,5 @@
 .header {
+  --color-text-muted: #0a090a;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -21,26 +22,13 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   flex-shrink: 0;
 }
 
-.logo-icon {
-  flex-shrink: 0;
-}
-
-.logo-text {
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-}
-
-.logo-crew {
-  color: var(--color-text);
-}
-
-.logo-up {
-  color: var(--color-primary);
+.logo-image {
+  height: 72px;
+  width: auto;
+  display: block;
 }
 
 .nav {
@@ -67,7 +55,11 @@
 }
 
 .nav-link:hover {
-  color: var(--color-text);
+  color: var(--color-primary);
+}
+
+.header-actions .btn-text {
+  color: var(--color-text-muted);
 }
 
 .nav-chevron {
