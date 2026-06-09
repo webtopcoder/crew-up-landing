@@ -1,9 +1,15 @@
-import heroImage from '../assets/hero-background.png'
+import heroImage from '../assets/hero-fullwidth.png'
 import './Hero.css'
 
 export default function Hero() {
   return (
     <section className="hero">
+      <img
+        src={heroImage}
+        alt=""
+        className="hero-bg"
+        aria-hidden="true"
+      />
       <div className="hero-inner">
         <div className="hero-content">
           <h1 className="hero-title">
@@ -65,14 +71,6 @@ export default function Hero() {
               Post a Project
             </a>
           </div>
-        </div>
-
-        <div className="hero-image-wrapper">
-          <img
-            src={heroImage}
-            alt="Construction workers reviewing plans on a tablet at a job site"
-            className="hero-image"
-          />
         </div>
       </div>
     </section>

@@ -2,21 +2,32 @@
   position: relative;
   padding: 48px 24px 120px;
   overflow: hidden;
+  min-height: 520px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   max-width: var(--max-width);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  min-height: 424px;
+  display: flex;
   align-items: center;
-  gap: 40px;
-  min-height: 480px;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
   max-width: 520px;
 }
 
@@ -47,42 +58,16 @@
   gap: 12px;
 }
 
-.hero-image-wrapper {
-  position: relative;
-  height: 100%;
-  min-height: 420px;
-}
-
-.hero-image {
-  position: absolute;
-  top: 50%;
-  right: -80px;
-  transform: translateY(-50%);
-  width: calc(100% + 160px);
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.3) 15%,
-    rgba(0, 0, 0, 0.85) 35%,
-    black 55%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.3) 15%,
-    rgba(0, 0, 0, 0.85) 35%,
-    black 55%
-  );
-}
-
 @media (max-width: 960px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
+  .hero {
     min-height: auto;
+    padding-bottom: 80px;
+  }
+
+  .hero-inner {
+    min-height: auto;
+    padding-top: 280px;
+    justify-content: center;
   }
 
   .hero-content {
@@ -99,30 +84,13 @@
   .hero-actions {
     justify-content: center;
   }
-
-  .hero-image-wrapper {
-    min-height: 320px;
-    order: -1;
-  }
-
-  .hero-image {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    width: 100%;
-    height: 320px;
-    border-radius: 12px;
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
-
-  .hero {
-    padding-bottom: 80px;
-  }
 }
 
 @media (max-width: 480px) {
+  .hero-inner {
+    padding-top: 220px;
+  }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
